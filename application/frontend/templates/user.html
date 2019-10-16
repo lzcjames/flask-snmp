@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Projet SNMP</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/user.css') }}"/>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="#">Chercher un fichier conf </a>
+  <a href="#">Lister les matétiels</a>
+  <a href="#">Voir un textuel</a>
+  <a href="#">Visualiser un graphie</a>
+  <a href="#">Consulter logs</a>
+
+  {% if role == "True" %}
+  <a href="#">Admin Champ 1</a>
+  <a href="#">Admin Champ 2</a>
+  {% endif %}
+</div>
+
+<div class="content">
+  <h2>Supervision SNMP</h2>
+  <h1>Hello {{ name }}</h1>
+  <p>une application de survelliance</p>
+</div>
+
+</body>
+</html>
