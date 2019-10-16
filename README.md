@@ -1,2 +1,8 @@
-To install this project, use command as the following:
-**pip install -r requirements.txt**
+# Flask SNMP
+
+## Installation
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install.
+
+```bash
+pip install -r requirements.txt
+```
