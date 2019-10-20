@@ -21,6 +21,15 @@ class Content(db.Model):
         self.description = description
         self.gender = gender
 
+class Deoones(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    description = db.Column(db.String(200), nullable=False)
+    gender = db.Column(db.Integer(), nullable=False)
+
+    def __init__(self, description, gender):
+        self.description = description
+        self.gender = gender
+
 def init_db():
     db.drop_all()
     db.create_all()
