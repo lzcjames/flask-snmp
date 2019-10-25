@@ -1,8 +1,10 @@
 from application import app
 from flask import Flask, render_template
 from .backend.dto.Material import Material
+from .backend.service.OperatorSnmp import OperatorSnmp
+
 @app.route('/<isAdmin>')
-def hello_name(isAdmin):
+def hello(isAdmin):
     users = [ # fake data from database
         {
             'info': { 'nickname': 'John', 'admin': False },
@@ -15,3 +17,14 @@ def hello_name(isAdmin):
     ]
     m1 = Material("toto","192.168.1.1",["ee","aa"])
     return render_template("user.html",users=users,isAdmin=isAdmin,ip= m1.ip)
+
+@app.route('/')
+def index():
+    result = OperatorSnmp.getResultSnmp('192.168.1.1','1.3.6.1.1.2.1.0')
+    results =[]
+    
+    for i in range(10):
+        results.append(result) 
+
+    length = len(results)
+    return render_template("user.html",results = results,length = length)

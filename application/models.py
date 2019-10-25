@@ -1,11 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
-
-from application import app
-
+from application import db
 import logging as lg
 
-# Create database connection object
-db = SQLAlchemy(app)
+
 
 
 class Content(db.Model):
@@ -32,4 +29,4 @@ def init_db():
     db.session.add(Content("THIS IS SPARTAAAAAAA!!!", 1))
     db.session.add(Content("What's your favorite scary movie?", 0))
     db.session.commit()
-    lg.info('Database initialized!')
+    lg.warning('Database initialized!')

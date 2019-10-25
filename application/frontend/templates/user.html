@@ -26,6 +26,10 @@
   <h1>Hello</h1>
   <p>une application de survelliance</p>
   <p>{{ ip }}</p>
+  {%for i in range(0, length)%} 
+    <li>{{ results[i] }}</li> 
+  {%endfor%} 
+
 </div>
 
 </body>
