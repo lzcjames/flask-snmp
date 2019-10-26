@@ -1,32 +1,36 @@
 from flask_sqlalchemy import SQLAlchemy
 from application import db
 import logging as lg
+from .backend.dto.Material import Material
+from .backend.dto.User import User
 
 
-
-
-class Content(db.Model):
+class Material(Material, db.Model): # Create a <Material> table which is mapped <Material> DTO and is inherited from db.Model class
     id = db.Column(db.Integer, primary_key=True)
-    description = db.Column(db.String(200), nullable=False)
-    gender = db.Column(db.Integer(), nullable=False)
+    name = db.Column(db.String(200), nullable=False)
+    ip = db.Column(db.String(128), nullable=True)
+    mac = db.Column(db.String(128), nullable=False)
+    interface = db.Column(db.String(128), nullable=True)
+    date = db.Column(db.String(128), nullable=False)
+    status = db.Column(db.String(128), nullable=True)
+    oids = db.Column(db.String(1024), nullable=True) # a JSONArray will be converted to String
 
-    def __init__(self, description, gender):
-        self.description = description
-        self.gender = gender
+    
+    def __repr__(self):
+        return '<Material %r>' % self.name 
 
-class Deoones(db.Model):
+class User(User, db.Model): # Create a <User> table which is mapped <User> DTO and is inherited from db.Model class
     id = db.Column(db.Integer, primary_key=True)
-    description = db.Column(db.String(200), nullable=False)
-    gender = db.Column(db.Integer(), nullable=False)
+    firstname = db.Column(db.String(128), nullable=False)
+    lastname = db.Column(db.String(128), nullable=True)
+    admin = db.Column(db.Boolean, default=False)
 
-    def __init__(self, description, gender):
-        self.description = description
-        self.gender = gender
 
 def init_db():
     db.drop_all()
     db.create_all()
-    db.session.add(Content("THIS IS SPARTAAAAAAA!!!", 1))
-    db.session.add(Content("What's your favorite scary movie?", 0))
+    db.session.add(Material("switch A","2","3","4","5","6","7"))
+    db.session.add(User("toto","TATA",True))
+    db.session.add(Material("switch B","2","3","4","5","6","7"))
     db.session.commit()
     lg.warning('Database initialized!')

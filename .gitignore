@@ -35,7 +35,7 @@ obj/**
 .pytest_cache
 tmp/**
 .python-version
-.vs/
+.vscode/
 test-results.xml
 uitests/out/**
 !build/
