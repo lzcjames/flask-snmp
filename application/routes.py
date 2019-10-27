@@ -15,7 +15,7 @@ def hello(isAdmin):
             'body': 'I am administrator!'
         }
     ]
-    m1 = Material("toto","192.168.1.1",["ee","aa"])
+    m1 = Material("toto","192.168.1.1","zez","v","d","s",["ee","aa"])
     return render_template("user.html",users=users,isAdmin=isAdmin,ip= m1.ip)
 
 @app.route('/')
@@ -27,4 +27,9 @@ def index():
         results.append(result) 
 
     length = len(results)
-    return render_template("user.html",results = results,length = length)
+    return render_template("user.html",results = results, length = length)
+
+@app.route('/tab')
+def tab():
+   
+    return render_template("test.html")

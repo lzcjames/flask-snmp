@@ -13,8 +13,7 @@ class Material(Material, db.Model): # Create a <Material> table which is mapped 
     interface = db.Column(db.String(128), nullable=True)
     date = db.Column(db.String(128), nullable=False)
     status = db.Column(db.String(128), nullable=True)
-    oids = db.Column(db.String(1024), nullable=True) # a JSONArray will be converted to String
-
+    oids = db.Column(db.String(1024), nullable=True) # a JSONArray will be converted to Strin
     
     def __repr__(self):
         return '<Material %r>' % self.name 
@@ -25,6 +24,8 @@ class User(User, db.Model): # Create a <User> table which is mapped <User> DTO a
     lastname = db.Column(db.String(128), nullable=True)
     admin = db.Column(db.Boolean, default=False)
 
+    def __repr__(self):
+        return '<User %r>' % self.fistname 
 
 def init_db():
     db.drop_all()

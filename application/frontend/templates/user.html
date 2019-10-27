@@ -9,15 +9,15 @@
 <body>
 
 <div class="sidenav">
-  <a href="#">Chercher un fichier conf </a>
-  <a href="#">Lister les matétiels</a>
-  <a href="#">Voir un textuel</a>
-  <a href="#">Visualiser un graphie</a>
-  <a href="#">Consulter logs</a>
+  <a class="highlight" href="#1">Chercher un fichier conf </a>
+  <a href="#2">Lister les matétiels</a>
+  <a href="#3">Voir un textuel</a>
+  <a href="#4">Visualiser un graphie</a>
+  <a href="#5">Consulter logs</a>
 
   {% if isAdmin == "True" %}
-  <a href="#">Admin Champ 1</a>
-  <a href="#">Admin Champ 2</a>
+  <a href="#6">Admin Champ 1</a>
+  <a href="#7">Admin Champ 2</a>
   {% endif %}
 </div>
 
@@ -25,12 +25,13 @@
   <h2>Supervision SNMP</h2>
   <h1>Hello</h1>
   <p>une application de survelliance</p>
-  <p>{{ ip }}</p>
-  {%for i in range(0, length)%} 
-    <li>{{ results[i] }}</li> 
-  {%endfor%} 
+  <input type = "button" onclick = "sayHello()" value = "Say Hello" />
+
+  
 
 </div>
-
 </body>
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/jquery.js') }}">\x3C/script>')</script>
+<script type="text/javascript" src="{{ url_for('static',filename='js/user.js') }}"></script>

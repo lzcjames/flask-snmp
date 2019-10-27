@@ -1,6 +1,7 @@
 from flask import Flask
 
 app = Flask(__name__,template_folder='./frontend/templates',static_folder='./frontend/static')
+
 from application import routes
 
 from config import Config

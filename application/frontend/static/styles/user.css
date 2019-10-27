@@ -30,12 +30,17 @@
   
   /* Change color on hover */
   .sidenav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: rgb(245, 166, 20);
+  
   }
   
   /* Style the content */
   .content {
     margin-left: 200px;
     padding-left: 20px;
+  }
+
+  .highlight { 
+    background-color:   rgb(245, 166, 20);
+
   }
