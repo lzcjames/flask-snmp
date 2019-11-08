@@ -1,7 +1,9 @@
+from flask_sqlalchemy import SQLAlchemy
 from application import app
-from flask import Flask, render_template
-from .backend.dto.Material import Material
+from flask import Flask, render_template, request
+from .models import Material
 from .backend.service.OperatorSnmp import OperatorSnmp
+
 
 @app.route('/<isAdmin>')
 def hello(isAdmin):
@@ -29,7 +31,14 @@ def index():
     length = len(results)
     return render_template("user.html",results = results, length = length)
 
-@app.route('/tab')
-def tab():
-   
-    return render_template("test.html")
+@app.route('/handle_data', methods=['POST'])
+def handle_data():
+    name = request.form['name']
+    ip = request.form['ip']
+    mac = request.form['mac']
+    interface = request.form['interface']
+    date = request.form['date']
+    status = request.form['status']
+    m1 = Material(name,ip,mac,interface,date,status,"1.3.6.1.1.2.1.1")
+    OperatorSnmp.add(m1)
+    return m1.name

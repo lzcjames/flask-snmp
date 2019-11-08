@@ -22,12 +22,25 @@
 </div>
 
 <div class="content">
-  <h2>Supervision SNMP</h2>
-  <h1>Hello</h1>
-  <p>une application de survelliance</p>
-  <input type = "button" onclick = "sayHello()" value = "Say Hello" />
-
-  
+  <div class="form-style-2">
+    <div class="form-style-2-heading">Ajouter un matériel</div>
+    <form action="{{ url_for('handle_data') }}" method="post">
+    <label for="field1"><span>nom <span class="required">*</span></span><input type="text" class="input-field" name="name"/></label>
+    <label for="field2"><span>adresse ip <span class="required">*</span></span><input type="text" class="input-field" name="ip"/></label>
+    <label for="field2"><span>adresse mac <span class="required">*</span></span><input type="text" class="input-field" name="mac"/></label>
+    <label for="field2"><span>interface <span class="required">*</span></span><input type="text" class="input-field" name="interface"/></label>
+    <label for="field2"><span>date ajoute <span class="required">*</span></span><input type="text" class="input-field" name="date"/></label>
+    <label for="field2"><span>status <span class="required">*</span></span><input type="text" class="input-field" name="status"/></label>
+    <label for="field4"><span>OIDS</span>
+        <select name="field4" class="select-field">
+          <option value="1.3.6.1.1.0.2.1">oid1</option>
+          <option value="Advertise">oid2</option>
+          <option value="Partnership">oid3</option>
+        </select>
+    </label>  
+    <label><span></span><input type="submit" value="Valider" /></label>
+    </form>
+  </div>
 
 </div>
 </body>

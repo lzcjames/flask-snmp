@@ -13,7 +13,7 @@ class Material(Material, db.Model): # Create a <Material> table which is mapped 
     interface = db.Column(db.String(128), nullable=True)
     date = db.Column(db.String(128), nullable=False)
     status = db.Column(db.String(128), nullable=True)
-    oids = db.Column(db.String(1024), nullable=True) # a JSONArray will be converted to Strin
+    oids = db.Column(db.String(1024), nullable=True) # a JSONArray will be converted to String
     
     def __repr__(self):
         return '<Material %r>' % self.name 
@@ -35,3 +35,6 @@ def init_db():
     db.session.add(Material("switch B","2","3","4","5","6","7"))
     db.session.commit()
     lg.warning('Database initialized!')
+
+
+   
