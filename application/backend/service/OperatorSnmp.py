@@ -1,4 +1,6 @@
 from application import db
+from ...models import Material
+import jsonpickle
 
 class OperatorSnmp:
 
@@ -6,8 +8,10 @@ class OperatorSnmp:
         command = 'snmpget -v 2c -c demopublic '+' '+hostname+' '+oid
         return '2341 octets'
 
-    def add(material):
-        db.session.add(material)
+    def add(jsonObject):
+        dto = jsonpickle.decode(jsonObject)
+        entity = Material(dto.name, dto.ip, dto.mac, dto.interface, dto.date, dto.status, dto.oids)
+        db.session.add(entity)
         db.session.commit()
         return "OK"
         

@@ -1,9 +1,9 @@
 from flask_sqlalchemy import SQLAlchemy
 from application import app
 from flask import Flask, render_template, request
-from .models import Material
+from .backend.dto.Material import Material
 from .backend.service.OperatorSnmp import OperatorSnmp
-
+import jsonpickle 
 
 @app.route('/<isAdmin>')
 def hello(isAdmin):
@@ -40,5 +40,6 @@ def handle_data():
     date = request.form['date']
     status = request.form['status']
     m1 = Material(name,ip,mac,interface,date,status,"1.3.6.1.1.2.1.1")
-    OperatorSnmp.add(m1)
+    m1Json = jsonpickle.encode(m1)
+    OperatorSnmp.add(m1Json)
     return m1.name

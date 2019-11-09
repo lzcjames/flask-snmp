@@ -4,8 +4,9 @@ import logging as lg
 from .backend.dto.Material import Material
 from .backend.dto.User import User
 
-
-class Material(Material, db.Model): # Create a <Material> table which is mapped <Material> DTO and is inherited from db.Model class
+# Material Entity 
+# To create a <Material> table which is mapped <Material> DTO and is inherited from db.Model class
+class Material(Material, db.Model): 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(200), nullable=False)
     ip = db.Column(db.String(128), nullable=True)
@@ -18,7 +19,9 @@ class Material(Material, db.Model): # Create a <Material> table which is mapped 
     def __repr__(self):
         return '<Material %r>' % self.name 
 
-class User(User, db.Model): # Create a <User> table which is mapped <User> DTO and is inherited from db.Model class
+# User Entity
+#To create a <User> table which is mapped <User> DTO and is inherited from db.Model class
+class User(User, db.Model): 
     id = db.Column(db.Integer, primary_key=True)
     firstname = db.Column(db.String(128), nullable=False)
     lastname = db.Column(db.String(128), nullable=True)
