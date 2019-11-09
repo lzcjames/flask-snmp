@@ -9,13 +9,19 @@ pip install -r requirements.txt
 
 
 ## Launch virtual environment
-In project root folder:
+Open CLI, on the path of project root folder:
 ```bash
 .\venv\Scripts\activate
 ```
 
 ## Launch server
-In project root folder:
+Open CLI, on the path of project root folder:
 ```bash
 flask run
+```
+
+## Init a databse
+Open CLI, on the path of project root folder:
+```bash
+flask create-db
 ```
