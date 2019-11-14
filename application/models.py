@@ -20,7 +20,7 @@ class Material(Material, db.Model):
         return '<Material %r>' % self.name 
 
 # User Entity
-#To create a <User> table which is mapped <User> DTO and is inherited from db.Model class
+# To create a <User> table which is mapped <User> DTO and is inherited from db.Model class
 class User(User, db.Model): 
     id = db.Column(db.Integer, primary_key=True)
     firstname = db.Column(db.String(128), nullable=False)

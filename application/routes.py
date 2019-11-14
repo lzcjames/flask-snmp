@@ -39,6 +39,7 @@ def handle_data():
     interface = request.form['interface']
     date = request.form['date']
     status = request.form['status']
+    
     m1 = Material(name,ip,mac,interface,date,status,"1.3.6.1.1.2.1.1")
     m1Json = jsonpickle.encode(m1)
     OperatorSnmp.add(m1Json)
