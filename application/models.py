@@ -36,6 +36,7 @@ def init_db():
     db.session.add(Material("switch A","2","3","4","5","6","7"))
     db.session.add(User("toto","TATA",True))
     db.session.add(Material("switch B","2","3","4","5","6","7"))
+    db.session.add(Material("switch C","2","3","4","5","6","7"))
     db.session.commit()
     lg.warning('Database initialized!')
 

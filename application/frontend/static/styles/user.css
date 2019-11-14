@@ -39,13 +39,40 @@
     margin-left: 200px;
     padding-left: 20px;
   }
-
+  /* highlight */
+ /*
   .highlight { 
     background-color: #EA7B00;
 
   }
+*/
 
+/***
+/** Table Material
+***/
+  .tabMaterial {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
   
+  .tabMaterial td, .tabMaterial th {
+	border: 1px solid #ddd;
+	padding: 8px;
+  }
+  
+  .tabMaterial tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .tabMaterial tr:hover {background-color: #ddd;}
+  
+  .tabMaterial th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+  }
+
   /***
   /** Form
   ***/

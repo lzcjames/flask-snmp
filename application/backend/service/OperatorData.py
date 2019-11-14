@@ -3,7 +3,7 @@ class OperatorData:
         # get result in format Text
     def getResultGraphic():
         # get result in format graphic
-    def getReultJson():
+    def getResultJson():
         # get result in format JSON
 
     
