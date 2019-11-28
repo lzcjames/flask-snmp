@@ -1,0 +1,7 @@
+README.txt
+setup.py
+verlib.py
+verlib.egg-info/PKG-INFO
+verlib.egg-info/SOURCES.txt
+verlib.egg-info/dependency_links.txt
+verlib.egg-info/top_level.txt

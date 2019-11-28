@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: verlib
+Version: 0.1
+Summary: A new version comparison tool for distutils.
+Home-page: https://bitbucket.org/tarek/distutilsversion
+Author: Tarek Ziadé
+Author-email: tarek@ziade.org
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Topic :: Software Development :: Libraries

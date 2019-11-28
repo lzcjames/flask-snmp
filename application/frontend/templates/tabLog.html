@@ -1,0 +1,21 @@
+<div class="form-style-2"></div>
+  <div class="form-style-2-heading">Log</div>
+  <table class="tabMaterial">
+      <tr>
+        <th>Niveau</th>
+        <th>Nom du matériel</th>
+        <th>Requête</th>
+        <th>Date</th>
+        <th>Information</th>
+      </tr>
+    {%for e in events%} 
+      <tr>
+        <td>{{e.level}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.request}}</td>
+        <td>{{e.timestamp}}</td>
+        <td>{{e.info}}</td>
+      </tr>
+    {%endfor%} 
+  </table>
+  </div>

@@ -13,9 +13,11 @@
   <a href="{{ url_for('get_data') }}">Lister les matériels</a>
   <a href="#3">Voir un textuel</a>
   <a href="#4">Visualiser un graphie</a>
-  <a href="#5">Consulter logs</a>
+  <a href="{{ url_for('get_log') }}">Consulter logs</a>
+  {% if admin %}
   <a href="{{ url_for('get_form') }}">Manipuler une conf  </a>
   <a href="#7">Admin Champ 2</a>
+  {% endif %}
 </div>
 
 <div class="content">
@@ -29,7 +31,7 @@
     <label for="field2"><span>interface <span class="required">*</span></span><input type="text" class="input-field" name="interface"  {% if materialToModify %} value="{{ materialToModify.interface }}"{% endif %}/></label>
     <label for="field2"><span>date ajoute <span class="required">*</span></span><input type="text" class="input-field" name="date"  {% if materialToModify %} value="{{ materialToModify.date }}"{% endif %}/></label>
     <label for="field2"><span>status <span class="required">*</span></span><input type="text" class="input-field" name="status"  {% if materialToModify %} value="{{ materialToModify.status }}"{% endif %}/></label>
-    <label for="field4"><span>OIDS</span>
+    <label for="field4"><span>oids</span>
         <select name="field4" class="select-field">
           <option value="1.3.6.1.1.0.2.1">oid1</option>
           <option value="Advertise">oid2</option>
@@ -42,38 +44,16 @@
   {% endif %}
 
   {% if get_data %}
-  <div class="form-style-2"></div>
-  <div class="form-style-2-heading">Liste des matériels</div>
-  <table class="tabMaterial">
-      <tr>
-        <th></th>
-        <th>Nom</th>
-        <th>IP</th>
-        <th>MAC</th>
-        <th>interface</th>
-        <th>date</th>
-        <th>status</th>
-        <th>oids</th>
-      </tr>
-    {%for m in materials%} 
-      <tr>
-        <td><a href="/sendto_form/{{m.name}}">Modifier</a> <a href="/delete/{{m.id}}">Supprimer</a></td>
-        <td>{{m.name}}</td>
-        <td>{{m.ip}}</td>
-        <td>{{m.mac}}</td>
-        <td>{{m.interface}}</td>
-        <td>{{m.date}}</td>
-        <td>{{m.status}}</td>
-        <td>{{m.oids}}</td>
-      </tr>
-    {%endfor%} 
-  </table>
-  </div>
+  {% include 'tabConf.html'%}
+  {% endif %}
+
+  {% if get_log %}
+  {% include 'tabLog.html'%}
   {% endif %}
 
 </div>
 </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/jquery.js') }}">\x3C/script>')</script>
+
 <script type="text/javascript" src="{{ url_for('static',filename='js/user.js') }}"></script>

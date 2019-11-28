@@ -2,6 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 from application import db
 import logging as lg
 from .backend.dto.Material import Material
+from .backend.dto.Event import Event
 from .backend.dto.User import User
 
 # Material Entity 
@@ -23,18 +24,32 @@ class Material(Material, db.Model):
 # To create a <User> table which is mapped <User> DTO and is inherited from db.Model class
 class User(User, db.Model): 
     id = db.Column(db.Integer, primary_key=True)
-    firstname = db.Column(db.String(128), nullable=False)
-    lastname = db.Column(db.String(128), nullable=True)
+    login = db.Column(db.String(128), nullable=False)
+    password = db.Column(db.String(128), nullable=True)
     admin = db.Column(db.Boolean, default=False)
 
     def __repr__(self):
-        return '<User %r>' % self.fistname 
+        return '<User %r>' % self.login 
+
+# Event Entity
+# To create a <Event> table which is mapped <Event> DTO and is inherited from db.Model class
+class Event(Event, db.Model): 
+    id = db.Column(db.Integer, primary_key=True)
+    level = db.Column(db.String(128), nullable=False)
+    name = db.Column(db.String(128), nullable=False)
+    request = db.Column(db.String(128), nullable=False)
+    timestamp = db.Column(db.String(128), nullable=False)
+    info = db.Column(db.String(256), nullable=True)
+    
+    def __repr__(self):
+        return ("["+self.level+"] | "+self.name+" | "+self.request+" | "+self.timestamp+" | "+self.info+" | ") 
 
 def init_db():
     db.drop_all()
     db.create_all()
     db.session.add(Material("switch A","2","3","4","5","6","7"))
-    db.session.add(User("toto","TATA",True))
+    db.session.add(User("admin","admin",True))
+    db.session.add(User("user","user",False))
     db.session.add(Material("switch B","2","3","4","5","6","7"))
     db.session.add(Material("switch C","2","3","4","5","6","7"))
     db.session.commit()
