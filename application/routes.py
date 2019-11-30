@@ -1,51 +1,39 @@
 from flask_sqlalchemy import SQLAlchemy
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, session   
 from application import app
 from application import db
 from .backend.dto.User import User
 from flask import Flask, render_template, request
 from .backend.dto.Material import Material
 from .backend.service.OperatorMaterial import OperatorMaterial
+from .backend.service.OperatorSnmp import OperatorSnmp
 from .backend.service.OperatorView import OperatorView
 from .backend.service.OperatorUser import OperatorUser
 import jsonpickle 
 
 
-
-@app.route('/<isAdmin>')
-def hello(isAdmin):
-    users = [ # fake data from database
-        {
-            'info': { 'nickname': 'John', 'admin': False },
-            'body': 'I am operator!'
-        },
-        {
-            'info': { 'nickname': 'Susan', 'admin': True },
-            'body': 'I am administrator!'
-        }
-    ]
-    m1 = Material("toto","192.168.1.1","zez","v","d","s",["ee","aa"])
-    return render_template("user.html",users=users,isAdmin=isAdmin,ip= m1.ip)
-
 @app.route('/')
-def index():
-    result = OperatorMaterial.getResultSnmp('192.168.1.1','1.3.6.1.1.2.1.0')
-    results =[]
-    
-    for i in range(10):
-        results.append(result) 
-
-    length = len(results)
-    return render_template("user.html",results = results, length = length)
+def home():
+    if not session.get('logged_in'):
+        return render_template('login.html', error="please login")
+    else:
+        return render_template("user.html", admin=session.get('logged_in_admin') )
 
 @app.route('/to_form/<name>')
 def to_form(name):
     materialToModify = OperatorMaterial.get(name)
-    return render_template("user.html", get_form=True,materialToModify=materialToModify)
+    
+    if not session.get('logged_in'):
+        return render_template('login.html', error="please login")
+    else :
+        return render_template("user.html", get_form=True,materialToModify=materialToModify, admin=session.get('logged_in_admin'))
 
 @app.route('/get_form')
 def get_form():
-    return render_template("user.html", get_form=True)
+    if not session.get('logged_in'):
+        return render_template('login.html', error="please login")
+    else :
+        return render_template("user.html", get_form=True, admin=session.get('logged_in_admin'))
 
 @app.route('/add_data', methods=['POST'])
 def add_data():
@@ -84,22 +72,52 @@ def delete_data(id):
 @app.route('/get_data', methods=['GET'])
 def get_data():
     materials = jsonpickle.decode((OperatorMaterial.getAll()))
-    return render_template("user.html",materials = materials, get_data=True)
+    
+    if not session.get('logged_in'):
+        return render_template('login.html', error="please login")
+    else :
+        return render_template("user.html",materials = materials, get_data=True, admin=session.get('logged_in_admin'))
 
 @app.route('/get_log', methods=['GET'])
 def get_log():
     events = jsonpickle.decode((OperatorView.getLog()))
-    return render_template("user.html",events = events, get_log=True)
+    
+    if not session.get('logged_in'):
+        return render_template('login.html', error="please login")
+    else :
+        return render_template("user.html",events = events, get_log=True, admin=session.get('logged_in_admin'))
+
+@app.route('/get_resultSnmp',methods=['GET'])
+def get_resultSnmp():
+    ip =  request.args.get('ip', None)
+    name =  request.args.get('name', None)
+    resultSnmp = {'a':{'status':1,'octects':2},'b':{'status':1,'octects':2},'c':{'status':1,'octects':2}}
+    res = OperatorSnmp.getResultSnmp(ip)
+    
+    if not session.get('logged_in'):
+        return render_template('login.html', error="please login")
+    else :
+        return render_template("user.html", materialname=name, resultSnmp=res, get_tabSnmp=True, admin=session.get('logged_in_admin'))
 
 # Route for handling the login page logic
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['POST'])
 def login():
     error = None
-    if request.method == 'POST':
-        sqlquery = OperatorUser.getUser((request.form['username']))
-        if request.form['username'] == sqlquery.login or request.form['password'] == sqlquery.password :
-            print(sqlquery.admin)
-            return render_template("user.html", admin=sqlquery.admin)
-        else:
-            error = 'Invalid Credentials. Please try again.'
-    return render_template('login.html', error=error)
+    username = (request.form['username'])
+    password = (request.form['password'])
+    sqlquery = OperatorUser.login(username)
+    
+    if username == sqlquery.login and password == sqlquery.password :
+        session['logged_in'] = True
+        if sqlquery.admin :
+            session['logged_in_admin'] = True
+        return render_template("user.html", admin=session.get('logged_in_admin'))
+    else:
+        error = 'Invalid Credentials. Please try again.'
+        return render_template('login.html', error=error)
+
+@app.route("/logout")
+def logout():
+    session['logged_in'] = False
+    session['logged_in_admin'] = False
+    return  render_template('login.html')

@@ -1,0 +1,18 @@
+<div class="form-style-2"></div>
+  <div class="form-style-2-heading">Tableau SNMP de {{ materialname}} </div>
+  <table class="tabMaterial">
+      <tr>
+        <th>Interface Name</th>
+        <th>Out Octects</th>
+        <th>Status</th>
+      </tr>
+    {%for name, value in resultSnmp.items()%} 
+      <tr>
+        <td>{{name}}</td>
+        {%for key, subvalue in value.items()%} 
+        <td>{{subvalue}}</td>
+        {%endfor%} 
+      </tr>
+    {%endfor%} 
+  </table>
+</div>

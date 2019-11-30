@@ -21,6 +21,7 @@
 </div>
 
 <div class="content">
+  <a href="{{ url_for('logout') }}">Logout</a>
   {% if get_form %}
   <div class="form-style-2">
     <div class="form-style-2-heading">Manipuler un matériel</div>
@@ -43,12 +44,18 @@
   </div>
   {% endif %}
 
-  {% if get_data %}
+  {% if get_data and admin %}
+  {% include 'tabConfAdmin.html'%}
+  {% elif get_data %}
   {% include 'tabConf.html'%}
   {% endif %}
 
   {% if get_log %}
   {% include 'tabLog.html'%}
+  {% endif %}
+
+  {% if get_tabSnmp %}
+  {% include 'tabSnmp.html'%}
   {% endif %}
 
 </div>

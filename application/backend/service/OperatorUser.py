@@ -21,10 +21,14 @@ class OperatorUser:
     def updateUser():
         # update ..
         return "OK"
-    def getUser(login):
-        user = User.query.filter_by(login=login).first_or_404()
-        return user
+    def getUser():
+        # get ..
+        return "OK"
     def getallUser():
         users = User.query.all()
         return (jsonpickle.encode(users))
+    
+    def login(login):
+        user = User.query.filter_by(login=login).first_or_404()
+        return user
         

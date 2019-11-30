@@ -1,6 +1,8 @@
 <div class="form-style-2"></div>
   <div class="form-style-2-heading">Liste des matériels</div>
   <table class="tabMaterial">
+      <tr>
+        <th></th>
         <th>Nom</th>
         <th>IP</th>
         <th>MAC</th>
@@ -11,6 +13,7 @@
       </tr>
     {%for m in materials%} 
       <tr>
+        <td><a href="/to_form/{{m.name}}">Modifier</a> <a href="/delete_data/{{m.id}}">Supprimer</a></td>
         <td><a href="{{ url_for('get_resultSnmp', name=m.name, ip=m.ip) }}">{{m.name}}</a></td>
         <td>{{m.ip}}</td>
         <td>{{m.mac}}</td>
