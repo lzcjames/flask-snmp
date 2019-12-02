@@ -3,16 +3,21 @@
   <table class="tabMaterial">
       <tr>
         <th>Interface Name</th>
-        <th>Out Octects</th>
         <th>Status</th>
+        <th>In Octects</th>
+        <th>Out Octects</th>
+        <th>date</th>
+        <th>Gragh</th>
       </tr>
-    {%for name, value in resultSnmp.items()%} 
-      <tr>
-        <td>{{name}}</td>
-        {%for key, subvalue in value.items()%} 
-        <td>{{subvalue}}</td>
+        {% for r in records  %} 
+        <tr>
+          <td>{{r.ifname}}</td>
+          <td>{{r.status}}</td>
+          <td>{{r.inoctects}}</td>
+          <td>{{r.outoctects}}</td>
+          <td>{{r.timestamp}}</td>
+          <td><a href="{{ url_for('get_SnmpGraph') }}">Voir graphique</a></td>
+        </tr>
         {%endfor%} 
-      </tr>
-    {%endfor%} 
   </table>
 </div>

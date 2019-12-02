@@ -15,7 +15,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #145;
+    background-color: rgb(37, 114, 165);
     overflow-x: hidden;
   }
   
@@ -39,16 +39,10 @@
     margin-left: 200px;
     padding-left: 20px;
   }
-  /* highlight */
- /*
-  .highlight { 
-    background-color: #EA7B00;
 
-  }
-*/
 
 /***
-/** Table Material
+/** Table Material / Log / Snmp
 ***/
   .tabMaterial {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -142,3 +136,32 @@
 	background: rgba(5, 133, 22, 0.651);
 	color: #fff;
 }
+
+
+.btnLogout {
+	box-shadow:inset 0px 1px 0px 0px #f2fadc;
+	background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+	background-color:#dbe6c4;
+	border-radius:3px;
+	border:1px solid #b2b8ad;
+	display:inline-block;
+	cursor:pointer;
+	color:#7d7a6f;
+	font-family:Arial;
+	font-size:14px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ced9bf;
+	position: absolute; 
+	right: 3px;
+}
+.btnLogout:hover {
+	background:linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+	background-color:#9ba892;
+}
+
+
+
+
+        
+

@@ -3,6 +3,7 @@ from application import db
 import logging as lg
 from .backend.dto.Material import Material
 from .backend.dto.Event import Event
+from .backend.dto.Record import Record
 from .backend.dto.User import User
 
 # Material Entity 
@@ -15,7 +16,7 @@ class Material(Material, db.Model):
     interface = db.Column(db.String(128), nullable=True)
     date = db.Column(db.String(128), nullable=False)
     status = db.Column(db.String(128), nullable=True)
-    oids = db.Column(db.String(1024), nullable=True) # a JSONArray will be converted to String
+    community = db.Column(db.String(1024), nullable=True) 
     
     def __repr__(self):
         return '<Material %r>' % self.name 
@@ -44,13 +45,26 @@ class Event(Event, db.Model):
     def __repr__(self):
         return ("["+self.level+"] | "+self.name+" | "+self.request+" | "+self.timestamp+" | "+self.info+" | ") 
 
+# Record Entity
+# To create a <Record> table which is mapped <Record> DTO and is inherited from db.Model class
+class Record(Record, db.Model): 
+    id = db.Column(db.Integer, primary_key=True)
+    materialname = db.Column(db.String(128), nullable=True)
+    ifname = db.Column(db.String(128), nullable=True)
+    status = db.Column(db.String(64), nullable=True)
+    inoctects = db.Column(db.String(256), nullable=True)
+    outoctects = db.Column(db.String(256), nullable=True)
+    timestamp = db.Column(db.String(128), nullable=True)
+    
+    
+
 def init_db():
     db.drop_all()
     db.create_all()
-    db.session.add(Material("switch A","2","3","4","5","6","7"))
+    db.session.add(Material("switch A","192.168.8.185","3","4","5","6","public"))
     db.session.add(User("admin","admin",True))
     db.session.add(User("user","user",False))
-    db.session.add(Material("switch B","2","3","4","5","6","7"))
+    db.session.add(Material("switch B","192.168.8.114","3","4","5","6","public"))
     db.session.add(Material("switch C","2","3","4","5","6","7"))
     db.session.commit()
     lg.warning('Database initialized!')

@@ -8,13 +8,9 @@ time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
 
 class OperatorMaterial:
 
-    def getResultSnmp(hostname, oid):
-        command = 'snmpget -v 2c -c univ-1 '+' '+hostname+' '+oid
-        return '2341 octets'
-
     def add(jsonObject):
         dto = jsonpickle.decode(jsonObject)
-        entity = Material(dto.name, dto.ip, dto.mac, dto.interface, dto.date, dto.status, dto.oids)
+        entity = Material(dto.name, dto.ip, dto.mac, dto.interface, dto.date, dto.status, dto.community)
         event = Event("INFO", entity.name, "ADD", time, "Supprimer le matériel "+ entity.name )
         
         db.session.add(entity)
@@ -46,7 +42,7 @@ class OperatorMaterial:
         dto.interface = newDto.interface
         dto.date = newDto.date
         dto.status = newDto.status
-        dto.oids = newDto.oids
+        dto.community = newDto.community
 
         db.session.merge(dto)
         db.session.add(event)

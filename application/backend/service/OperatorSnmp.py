@@ -1,38 +1,64 @@
 from puresnmp import get,walk
+from ...models import Record
+from ...models import Material
+import datetime
+import jsonpickle
+from application import db
+import os
 
 interfaces=[]
 statuses={}
-octects={}
+inOctects={}
+outOctects={}
 merge={}
 grandmerge=[]
-COMMUNITY = 'public'
+
+
 # TODO: besoin arrayIf[oid1,oid2,oid3...]
-IfStatus = "1.3.6.1.2.1.2.2.1.8" # ifOperStatus
+IfStatuses = "1.3.6.1.2.1.2.2.1.8" # ifOperStatus
 IfNames =  "1.3.6.1.2.1.2.2.1.2" # ifDescr
 If_OutOctets = '1.3.6.1.2.1.2.2.1.16' # ifOutOctets 
-
-
-
+If_InOctets = '1.3.6.1.2.1.2.2.1.10' # ifInOctets 
 
 class OperatorSnmp:
-    def getIfNames(ip):
-       for row in walk(ip, COMMUNITY, IfNames):
+    def initVars():
+        interfaces.clear()
+        statuses.clear()
+        inOctects.clear()
+        outOctects.clear()
+        merge.clear()
+        grandmerge.clear()
+    
+
+    def getIfNames(ip,community):
+       for row in walk(ip, community, IfNames):
             n ="%s, %s" %row
             n = n.split(',')
             name = n[1].replace("b'",'')
             name = name.replace("'",'').strip()
             interfaces.append(name)
-    def getOutOctects(ip):
+    
+    def getInOctects(ip,community):
         i=0
-        for row in walk(ip, COMMUNITY, If_OutOctets):
+        for row in walk(ip, community, If_InOctets):
             o ="%s, %s" %row
             o = o.split(',')
-            octect = o[1].strip()
-            octects[i]=octect
+            inOctect = o[1].strip()
+            inOctects[i]=inOctect
             i=i+1
-    def getStatuses(ip):  
+    
+    def getOutOctects(ip,community):
+        i=0
+        for row in walk(ip, community, If_OutOctets):
+            o ="%s, %s" %row
+            o = o.split(',')
+            outOctect = o[1].strip()
+            outOctects[i] = outOctect
+            i=i+1
+
+    def getStatuses(ip,community):  
         j=0
-        for row in walk(ip, COMMUNITY, IfStatus):
+        for row in walk(ip, community, IfStatuses):
             t ="%s, %r" %row
             t = t.split(',')
 
@@ -47,14 +73,62 @@ class OperatorSnmp:
 
             statuses[j]=status
             j=j+1
-    def getResultSnmp(ip):
-        OperatorSnmp.getIfNames(ip)
-        OperatorSnmp.getOutOctects(ip)
-        OperatorSnmp.getStatuses(ip)
-        for i in octects: 
-            merge={"octect":octects[i],"status":statuses[i]}
+
+    def addRecord (result,materialname):
+        time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+        for key, value in result.items():
+            record = Record()
+            record.materialname = materialname
+            record.ifname = key
+            record.timestamp = time
+            for subkey, subvalue in value.items():
+                if (subkey == "status"):
+                    record.status = subvalue
+                if (subkey == "inoctects"):
+                    record.inoctects = subvalue
+                if (subkey == "outoctects"):    
+                    record.outoctects = subvalue
+            db.session.add(record)
+            db.session.commit()
+
+    def getRecordsbyNameAndDate(materialname):
+        records=[]
+        lastTarget = Record.query.filter_by(materialname=materialname).order_by(Record.timestamp.desc()).first()
+        records = Record.query.filter_by(materialname=materialname,timestamp = lastTarget.timestamp).all()
+        return jsonpickle.encode(records)
+
+    def getRecordsbyName(materialname):
+        records=[]
+        records = Record.query.filter_by(materialname=materialname).all()
+        return jsonpickle.encode(records)
+        
+
+    def getResultSnmp(ip,materialname,community):
+        OperatorSnmp.initVars()
+        OperatorSnmp.getIfNames(ip,community)
+        OperatorSnmp.getInOctects(ip,community)
+        OperatorSnmp.getOutOctects(ip,community)
+        OperatorSnmp.getStatuses(ip,community)
+       
+        for i in statuses: 
+            merge={"status":statuses[i],"inoctects":inOctects[i], "outoctects":outOctects[i]}
             grandmerge.append(merge)
-        res = dict(zip(interfaces, grandmerge))
-        return res
+        result = dict(zip(interfaces, grandmerge))
+       
+        OperatorSnmp.addRecord(result,materialname)
+        
+        return result
+
+
+    def monitorSnmp():
+        materials = Material.query.all()
+        for m in materials:
+            response = os.system('ping -n 1 ' + m.ip)
+            if response == 0:
+                OperatorSnmp.getResultSnmp(m.ip, m.name,m.community) 
+        return materials
+    
+
+    
     
 

@@ -9,18 +9,18 @@
         <th>interface</th>
         <th>date</th>
         <th>status</th>
-        <th>oids</th>
+        <th>community</th>
       </tr>
     {%for m in materials%} 
       <tr>
         <td><a href="/to_form/{{m.name}}">Modifier</a> <a href="/delete_data/{{m.id}}">Supprimer</a></td>
-        <td><a href="{{ url_for('get_resultSnmp', name=m.name, ip=m.ip) }}">{{m.name}}</a></td>
+        <td><a href="{{ url_for('get_SnmpText', name=m.name, ip=m.ip) }}">{{m.name}}</a></td>
         <td>{{m.ip}}</td>
         <td>{{m.mac}}</td>
         <td>{{m.interface}}</td>
         <td>{{m.date}}</td>
         <td>{{m.status}}</td>
-        <td>{{m.oids}}</td>
+        <td>{{m.community}}</td>
       </tr>
     {%endfor%} 
   </table>
