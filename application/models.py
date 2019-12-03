@@ -52,8 +52,8 @@ class Record(Record, db.Model):
     materialname = db.Column(db.String(128), nullable=True)
     ifname = db.Column(db.String(128), nullable=True)
     status = db.Column(db.String(64), nullable=True)
-    inoctects = db.Column(db.String(256), nullable=True)
-    outoctects = db.Column(db.String(256), nullable=True)
+    inoctects = db.Column(db.Integer, nullable=True)
+    outoctects = db.Column(db.Integer, nullable=True)
     timestamp = db.Column(db.String(128), nullable=True)
     
     

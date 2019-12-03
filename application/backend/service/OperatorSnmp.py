@@ -93,13 +93,13 @@ class OperatorSnmp:
 
     def getRecordsbyNameAndDate(materialname):
         records=[]
-        lastTarget = Record.query.filter_by(materialname=materialname).order_by(Record.timestamp.desc()).first()
+        lastTarget = Record.query.filter_by(materialname=materialname).order_by(Record.timestamp.desc()).first_or_404(description='No data')
         records = Record.query.filter_by(materialname=materialname,timestamp = lastTarget.timestamp).all()
         return jsonpickle.encode(records)
 
-    def getRecordsbyName(materialname):
+    def getRecordsbyNameAndIfname(materialname,ifname):
         records=[]
-        records = Record.query.filter_by(materialname=materialname).all()
+        records = Record.query.filter_by(materialname=materialname, ifname=ifname).all()
         return jsonpickle.encode(records)
         
 
@@ -118,7 +118,6 @@ class OperatorSnmp:
         OperatorSnmp.addRecord(result,materialname)
         
         return result
-
 
     def monitorSnmp():
         materials = Material.query.all()

@@ -29,6 +29,6 @@ class OperatorUser:
         return (jsonpickle.encode(users))
     
     def login(login):
-        user = User.query.filter_by(login=login).first_or_404()
+        user = User.query.filter_by(login=login).first_or_404(description='No such user named {}'.format(login))
         return user
         

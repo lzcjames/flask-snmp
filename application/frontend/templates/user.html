@@ -3,6 +3,7 @@
 <head>
 <title>Projet SNMP</title>
 <meta charset="utf-8">
+<meta http-equiv="refresh" content="65" >
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/user.css') }}"/>
 </head>
@@ -10,7 +11,8 @@
 
 <div class="sidenav">
   <a href="{{ url_for('get_data') }}">Lister les matériels</a>
-  <a href="{{ url_for('get_log') }}">Consulter logs</a>
+  <a href="{{ url_for('get_log_event') }}">Consulter logs Event</a>
+  <a href="{{ url_for('get_log_record') }}">Consulter logs Record</a>
   <a class="highlight" href="#1">Chercher une conf </a>
   {% if admin %}
   <a href="{{ url_for('get_form') }}">Manipuler une conf  </a>
@@ -42,18 +44,24 @@
   {% include 'tabConf.html'%}
   {% endif %}
 
-  {% if get_log %}
-  {% include 'tabLog.html'%}
+  {% if get_log_event %}
+  {% include 'tabLogEvent.html'%}
+  {% endif %}
+
+  {% if get_log_record %}
+  {% include 'tabLogRecord.html'%}
   {% endif %}
 
   {% if get_tabSnmp %}
   {% include 'tabSnmp.html'%}
   {% endif %}
 
-  {% if graph_data %}
-  <embed type="image/svg+xml" src={{graph_data|safe}} style='max-width:1000px'/>
+  {% if graph_data_inOctects %}
+  <embed type="image/svg+xml" src={{graph_data_inOctects|safe}} style='max-width:1000px'/>
   {% endif %}
 </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static',filename='js/user.js') }}"></script>
 </html>
 

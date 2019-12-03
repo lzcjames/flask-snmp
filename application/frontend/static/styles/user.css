@@ -161,6 +161,33 @@
 }
 
 
+#searchRecord{
+	width: 130px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	background-position: left; 
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/500px-Search_Icon.svg.png');
+	background-size: 30%;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+  }
+  #searchRecord::placeholder {
+	color:transparent;
+  }
+  #searchRecord:focus {
+	background-size: 0%;
+	width: 100%;
+  }
+  #searchRecord:focus::placeholder {
+	color:#9ba892;
+	width: 100%;
+  }
+
 
 
         

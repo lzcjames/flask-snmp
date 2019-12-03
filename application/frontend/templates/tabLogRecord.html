@@ -1,22 +1,23 @@
 <div class="form-style-2"></div>
-  <div class="form-style-2-heading">Tableau SNMP de {{materialname}} </div>
-  <table class="tabMaterial">
+  <div class="form-style-2-heading">Tableau Log de {{ materialname}} </div>
+  <input id="searchRecord" type="text"  placeholder="Format: Matériel  InterfaceName  Status  InOutects  OutOctect  Date">
+  <table id="tableRecord" class="tabMaterial">
       <tr>
+        <th>Matériel</th>
         <th>Interface Name</th>
         <th>Status</th>
         <th>In Octects</th>
         <th>Out Octects</th>
         <th>Date</th>
-        <th>Gragh</th>
       </tr>
         {% for r in records  %} 
         <tr>
+          <td>{{r.materialname}}</td>
           <td>{{r.ifname}}</td>
           <td>{{r.status}}</td>
           <td>{{r.inoctects}}</td>
           <td>{{r.outoctects}}</td>
           <td>{{r.timestamp}}</td>
-          <td><a href="{{ url_for('get_SnmpGraph', name = materialname, ifname = r.ifname) }}">Voir graphique</a></td>
         </tr>
         {%endfor%} 
   </table>
