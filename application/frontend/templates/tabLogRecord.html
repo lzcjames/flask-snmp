@@ -1,6 +1,10 @@
 <div class="form-style-2"></div>
-  <div class="form-style-2-heading">Tableau Log de {{ materialname}} </div>
-  <input id="searchRecord" type="text"  placeholder="Format: Matériel  InterfaceName  Status  InOutects  OutOctect  Date">
+  <div class="form-style-2-heading">Tableau de log Record  </div>
+  <div>
+    <input id="searchRecord" type="text"  placeholder="Format: Matériel  InterfaceName  Status  InOutects  OutOctect  Date">
+    <a href="{{ url_for('export_record') }}" onclick="return alert('Data has been exported')"><input class="btn" type="submit" value="Export All" /></input></a>
+  </div>
+  <br>
   <table id="tableRecord" class="tabMaterial">
       <tr>
         <th>Matériel</th>

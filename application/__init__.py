@@ -31,7 +31,6 @@ def monitor_snmp():
     print (res)
 
 db.app = app
-
 scheduler = BackgroundScheduler()
 scheduler.add_job(func=monitor_snmp, trigger="interval", seconds=60)
 scheduler.start()

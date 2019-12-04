@@ -1,0 +1,20 @@
+{
+    "0": {
+        "id": 1,
+        "name": "switch A",
+        "ip": "192.168.8.185",
+        "mac": "3",
+        "interface": "4",
+        "date": "5",
+        "community": "public"
+    },
+    "1": {
+        "id": 2,
+        "name": "switch B",
+        "ip": "192.168.8.114",
+        "mac": "3",
+        "interface": "4",
+        "date": "5",
+        "community": "public"
+    }
+}

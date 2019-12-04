@@ -14,7 +14,7 @@ import json
 import pygal
 import datetime
 import os
-
+import json
 @app.route('/')
 def home():
     if not session.get('logged_in'):
@@ -44,10 +44,9 @@ def add_data():
     mac = request.form['mac']
     interface = request.form['interface']
     date = request.form['date']
-    status = request.form['status']
     community = request.form['community']
 
-    m1 = Material(name, ip, mac, interface, date, status, community)
+    m1 = Material(name, ip, mac, interface, date, community)
     m1Json = jsonpickle.encode(m1)
     OperatorMaterial.add(m1Json)
     return get_data()
@@ -59,18 +58,20 @@ def update_data(id):
     mac = request.form['mac']
     interface = request.form['interface']
     date = request.form['date']
-    status = request.form['status']
     community = request.form['community']
 
-    m1 = Material(name, ip, mac, interface, date, status, community)
+    m1 = Material(name, ip, mac, interface, date, community)
     m1Json = jsonpickle.encode(m1)
     res = OperatorMaterial.update(m1Json, id)
     return get_data()
 
 @app.route('/delete_data/<int:id>')
 def delete_data(id):
-    res = OperatorMaterial.delete(id)
-    return get_data()
+    if not session.get('logged_in_admin'):
+        return render_template("login.html", logininfo="please login before you delete data" )
+    else :
+        res = OperatorMaterial.delete(id)
+        return get_data()
 
 @app.route('/get_data', methods = ['GET'])
 def get_data():
@@ -88,20 +89,61 @@ def get_log_event():
     else :
         return render_template("user.html", events = events, get_log_event = True, admin = session.get('logged_in_admin'))
 
-@app.route('/export_event', methods = ['GET'])
+@app.route('/export_event')
 def export_event():
     events = jsonpickle.decode((OperatorView.getLogEvent()))
     time = datetime.datetime.now().strftime("%Y-%m-%d")
+    
     filename = 'Event-'+time+'.log'
     new_file_path = os.path.join('./Export/', filename) # the default path is project root path
-    with open(new_file_path,mode='w', buffering=-1, 
-      encoding='utf-8', errors=None, newline=None, 
-      closefd=True, opener=None) as f:
-        for strEvent in events:
-            f.writelines(str(strEvent)+"\n")
-        f.close()
-    return ("ok")
     
+    if not session.get('logged_in'):
+        return render_template("login.html", logininfo="please login before you export data" )
+    else :
+        with open(new_file_path,mode='w', buffering=-1, 
+        encoding='utf-8', errors=None, newline=None, 
+        closefd=True, opener=None) as f:
+            for strEvent in events:
+                f.writelines(str(strEvent)+"\n")
+            f.close()
+        return render_template("user.html")
+
+@app.route('/export_record')
+def export_record():
+    dictReocrd = OperatorView.exportLogRecord()
+    time = datetime.datetime.now().strftime("%Y-%m-%d")
+    
+    filename = 'Record-'+time+'.json'
+    new_file_path = os.path.join('./Export/', filename) # the default path is project root path
+    
+    if not session.get('logged_in'):
+        return render_template("login.html", logininfo="please login before you export data" )
+    else :
+        with open(new_file_path,mode='w', buffering=-1, 
+        encoding='utf-8', errors=None, newline=None, 
+        closefd=True, opener=None) as f:
+            f.write(json.dumps(dictReocrd, indent=4))
+            f.close()
+        return render_template("user.html")
+
+@app.route('/export_conf')
+def export_conf():
+    dictMaterial = OperatorView.getConf()
+    time = datetime.datetime.now().strftime("%Y-%m-%d")
+    
+    filename = 'Conf-'+time+'.json'
+    new_file_path = os.path.join('./Export/', filename) # the default path is project root path
+    
+    if not session.get('logged_in'):
+        return render_template("login.html", logininfo="please login before you export data" )
+    else :
+        with open(new_file_path,mode='w', buffering=-1, 
+        encoding='utf-8', errors=None, newline=None, 
+        closefd=True, opener=None) as f:
+            f.write(json.dumps(dictMaterial, indent=4))
+            f.close()
+        return render_template("user.html")
+
 @app.route('/get_log_record', methods = ['GET'])
 def get_log_record():
     records = jsonpickle.decode((OperatorView.getLogRecord()))

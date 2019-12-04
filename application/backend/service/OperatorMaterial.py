@@ -10,7 +10,7 @@ class OperatorMaterial:
 
     def add(jsonObject):
         dto = jsonpickle.decode(jsonObject)
-        entity = Material(dto.name, dto.ip, dto.mac, dto.interface, dto.date, dto.status, dto.community)
+        entity = Material(dto.name, dto.ip, dto.mac, dto.interface, dto.date, dto.community)
         event = Event("INFO", entity.name, "ADD", time, "Supprimer le matériel "+ entity.name )
         
         db.session.add(entity)
@@ -41,7 +41,6 @@ class OperatorMaterial:
         dto.mac = newDto.mac
         dto.interface = newDto.interface
         dto.date = newDto.date
-        dto.status = newDto.status
         dto.community = newDto.community
 
         db.session.merge(dto)

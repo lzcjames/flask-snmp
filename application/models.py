@@ -15,7 +15,6 @@ class Material(Material, db.Model):
     mac = db.Column(db.String(128), nullable=False)
     interface = db.Column(db.String(128), nullable=True)
     date = db.Column(db.String(128), nullable=False)
-    status = db.Column(db.String(128), nullable=True)
     community = db.Column(db.String(1024), nullable=True) 
     
     def __repr__(self):
@@ -61,11 +60,11 @@ class Record(Record, db.Model):
 def init_db():
     db.drop_all()
     db.create_all()
-    db.session.add(Material("switch A","192.168.8.185","3","4","5","6","public"))
+    db.session.add(Material("switch A","192.168.8.185","3","4","5","public"))
     db.session.add(User("admin","admin",True))
     db.session.add(User("user","user",False))
-    db.session.add(Material("switch B","192.168.8.114","3","4","5","6","public"))
-    db.session.add(Material("switch C","2","3","4","5","6","7"))
+    db.session.add(Material("switch B","192.168.8.114","3","4","5","public"))
+    db.session.add(Material("switch C","2","3","4","5","7"))
     db.session.commit()
     lg.warning('Database initialized!')
 

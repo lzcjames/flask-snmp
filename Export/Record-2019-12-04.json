@@ -1,0 +1,1379 @@
+{
+    "0": {
+        "id": 1,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:31"
+    },
+    "1": {
+        "id": 2,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 47267,
+        "outoctects": 21861,
+        "timestamp": "2019-12-04 00:31"
+    },
+    "2": {
+        "id": 3,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 94746,
+        "outoctects": 49715,
+        "timestamp": "2019-12-04 00:31"
+    },
+    "3": {
+        "id": 4,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:31"
+    },
+    "4": {
+        "id": 5,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:31"
+    },
+    "5": {
+        "id": 6,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:31"
+    },
+    "6": {
+        "id": 7,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 67454,
+        "outoctects": 47405,
+        "timestamp": "2019-12-04 00:31"
+    },
+    "7": {
+        "id": 8,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:31"
+    },
+    "8": {
+        "id": 9,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:31"
+    },
+    "9": {
+        "id": 10,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:32"
+    },
+    "10": {
+        "id": 11,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 47963,
+        "outoctects": 21861,
+        "timestamp": "2019-12-04 00:32"
+    },
+    "11": {
+        "id": 12,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 98704,
+        "outoctects": 52743,
+        "timestamp": "2019-12-04 00:32"
+    },
+    "12": {
+        "id": 13,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:32"
+    },
+    "13": {
+        "id": 14,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:32"
+    },
+    "14": {
+        "id": 15,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:32"
+    },
+    "15": {
+        "id": 16,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 71274,
+        "outoctects": 50287,
+        "timestamp": "2019-12-04 00:32"
+    },
+    "16": {
+        "id": 17,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:32"
+    },
+    "17": {
+        "id": 18,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:32"
+    },
+    "18": {
+        "id": 19,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:33"
+    },
+    "19": {
+        "id": 20,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 48659,
+        "outoctects": 21861,
+        "timestamp": "2019-12-04 00:33"
+    },
+    "20": {
+        "id": 21,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 101798,
+        "outoctects": 55141,
+        "timestamp": "2019-12-04 00:33"
+    },
+    "21": {
+        "id": 22,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:33"
+    },
+    "22": {
+        "id": 23,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:33"
+    },
+    "23": {
+        "id": 24,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:33"
+    },
+    "24": {
+        "id": 25,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 74140,
+        "outoctects": 52509,
+        "timestamp": "2019-12-04 00:33"
+    },
+    "25": {
+        "id": 26,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:33"
+    },
+    "26": {
+        "id": 27,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:33"
+    },
+    "27": {
+        "id": 28,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:34"
+    },
+    "28": {
+        "id": 29,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 49063,
+        "outoctects": 22263,
+        "timestamp": "2019-12-04 00:34"
+    },
+    "29": {
+        "id": 30,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 104972,
+        "outoctects": 57809,
+        "timestamp": "2019-12-04 00:34"
+    },
+    "30": {
+        "id": 31,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:34"
+    },
+    "31": {
+        "id": 32,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:34"
+    },
+    "32": {
+        "id": 33,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:34"
+    },
+    "33": {
+        "id": 34,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 76966,
+        "outoctects": 54821,
+        "timestamp": "2019-12-04 00:34"
+    },
+    "34": {
+        "id": 35,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:34"
+    },
+    "35": {
+        "id": 36,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:34"
+    },
+    "36": {
+        "id": 37,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:35"
+    },
+    "37": {
+        "id": 38,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 49063,
+        "outoctects": 22263,
+        "timestamp": "2019-12-04 00:35"
+    },
+    "38": {
+        "id": 39,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 107640,
+        "outoctects": 60477,
+        "timestamp": "2019-12-04 00:35"
+    },
+    "39": {
+        "id": 40,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:35"
+    },
+    "40": {
+        "id": 41,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:35"
+    },
+    "41": {
+        "id": 42,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:35"
+    },
+    "42": {
+        "id": 43,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 79196,
+        "outoctects": 57043,
+        "timestamp": "2019-12-04 00:35"
+    },
+    "43": {
+        "id": 44,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:35"
+    },
+    "44": {
+        "id": 45,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:35"
+    },
+    "45": {
+        "id": 46,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:36"
+    },
+    "46": {
+        "id": 47,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 49306,
+        "outoctects": 22263,
+        "timestamp": "2019-12-04 00:36"
+    },
+    "47": {
+        "id": 48,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 110491,
+        "outoctects": 63145,
+        "timestamp": "2019-12-04 00:36"
+    },
+    "48": {
+        "id": 49,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:36"
+    },
+    "49": {
+        "id": 50,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:36"
+    },
+    "50": {
+        "id": 51,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:36"
+    },
+    "51": {
+        "id": 52,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 81639,
+        "outoctects": 59235,
+        "timestamp": "2019-12-04 00:36"
+    },
+    "52": {
+        "id": 53,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:36"
+    },
+    "53": {
+        "id": 54,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:36"
+    },
+    "54": {
+        "id": 55,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:37"
+    },
+    "55": {
+        "id": 56,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 49306,
+        "outoctects": 22263,
+        "timestamp": "2019-12-04 00:37"
+    },
+    "56": {
+        "id": 57,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 113159,
+        "outoctects": 65813,
+        "timestamp": "2019-12-04 00:37"
+    },
+    "57": {
+        "id": 58,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:37"
+    },
+    "58": {
+        "id": 59,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:37"
+    },
+    "59": {
+        "id": 60,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:37"
+    },
+    "60": {
+        "id": 61,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 83689,
+        "outoctects": 61277,
+        "timestamp": "2019-12-04 00:37"
+    },
+    "61": {
+        "id": 62,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:37"
+    },
+    "62": {
+        "id": 63,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:37"
+    },
+    "63": {
+        "id": 64,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:38"
+    },
+    "64": {
+        "id": 65,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 49710,
+        "outoctects": 22665,
+        "timestamp": "2019-12-04 00:38"
+    },
+    "65": {
+        "id": 66,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 115827,
+        "outoctects": 68633,
+        "timestamp": "2019-12-04 00:38"
+    },
+    "66": {
+        "id": 67,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:38"
+    },
+    "67": {
+        "id": 68,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:38"
+    },
+    "68": {
+        "id": 69,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:38"
+    },
+    "69": {
+        "id": 70,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 85919,
+        "outoctects": 63499,
+        "timestamp": "2019-12-04 00:38"
+    },
+    "70": {
+        "id": 71,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:38"
+    },
+    "71": {
+        "id": 72,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:38"
+    },
+    "72": {
+        "id": 73,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:39"
+    },
+    "73": {
+        "id": 74,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 49710,
+        "outoctects": 22665,
+        "timestamp": "2019-12-04 00:39"
+    },
+    "74": {
+        "id": 75,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 118495,
+        "outoctects": 71301,
+        "timestamp": "2019-12-04 00:39"
+    },
+    "75": {
+        "id": 76,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:39"
+    },
+    "76": {
+        "id": 77,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:39"
+    },
+    "77": {
+        "id": 78,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:39"
+    },
+    "78": {
+        "id": 79,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 88239,
+        "outoctects": 65811,
+        "timestamp": "2019-12-04 00:39"
+    },
+    "79": {
+        "id": 80,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:39"
+    },
+    "80": {
+        "id": 81,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:39"
+    },
+    "81": {
+        "id": 82,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:40"
+    },
+    "82": {
+        "id": 83,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 49710,
+        "outoctects": 22665,
+        "timestamp": "2019-12-04 00:40"
+    },
+    "83": {
+        "id": 84,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 120983,
+        "outoctects": 73789,
+        "timestamp": "2019-12-04 00:40"
+    },
+    "84": {
+        "id": 85,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:40"
+    },
+    "85": {
+        "id": 86,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:40"
+    },
+    "86": {
+        "id": 87,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:40"
+    },
+    "87": {
+        "id": 88,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 90469,
+        "outoctects": 68033,
+        "timestamp": "2019-12-04 00:40"
+    },
+    "88": {
+        "id": 89,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:40"
+    },
+    "89": {
+        "id": 90,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:40"
+    },
+    "90": {
+        "id": 91,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:41"
+    },
+    "91": {
+        "id": 92,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 49710,
+        "outoctects": 22665,
+        "timestamp": "2019-12-04 00:41"
+    },
+    "92": {
+        "id": 93,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 123651,
+        "outoctects": 76457,
+        "timestamp": "2019-12-04 00:41"
+    },
+    "93": {
+        "id": 94,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:41"
+    },
+    "94": {
+        "id": 95,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:41"
+    },
+    "95": {
+        "id": 96,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:41"
+    },
+    "96": {
+        "id": 97,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 92789,
+        "outoctects": 70345,
+        "timestamp": "2019-12-04 00:41"
+    },
+    "97": {
+        "id": 98,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:41"
+    },
+    "98": {
+        "id": 99,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:41"
+    },
+    "99": {
+        "id": 100,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:42"
+    },
+    "100": {
+        "id": 101,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 50054,
+        "outoctects": 23007,
+        "timestamp": "2019-12-04 00:42"
+    },
+    "101": {
+        "id": 102,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 126139,
+        "outoctects": 78945,
+        "timestamp": "2019-12-04 00:42"
+    },
+    "102": {
+        "id": 103,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:42"
+    },
+    "103": {
+        "id": 104,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:42"
+    },
+    "104": {
+        "id": 105,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:42"
+    },
+    "105": {
+        "id": 106,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 95019,
+        "outoctects": 72567,
+        "timestamp": "2019-12-04 00:42"
+    },
+    "106": {
+        "id": 107,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:42"
+    },
+    "107": {
+        "id": 108,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:42"
+    },
+    "108": {
+        "id": 109,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:43"
+    },
+    "109": {
+        "id": 110,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 50114,
+        "outoctects": 23067,
+        "timestamp": "2019-12-04 00:43"
+    },
+    "110": {
+        "id": 111,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 128807,
+        "outoctects": 81613,
+        "timestamp": "2019-12-04 00:43"
+    },
+    "111": {
+        "id": 112,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:43"
+    },
+    "112": {
+        "id": 113,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:43"
+    },
+    "113": {
+        "id": 114,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:43"
+    },
+    "114": {
+        "id": 115,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 97339,
+        "outoctects": 74879,
+        "timestamp": "2019-12-04 00:43"
+    },
+    "115": {
+        "id": 116,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:43"
+    },
+    "116": {
+        "id": 117,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:43"
+    },
+    "117": {
+        "id": 118,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:44"
+    },
+    "118": {
+        "id": 119,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 50114,
+        "outoctects": 23067,
+        "timestamp": "2019-12-04 00:44"
+    },
+    "119": {
+        "id": 120,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 131085,
+        "outoctects": 83891,
+        "timestamp": "2019-12-04 00:44"
+    },
+    "120": {
+        "id": 121,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:44"
+    },
+    "121": {
+        "id": 122,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:44"
+    },
+    "122": {
+        "id": 123,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:44"
+    },
+    "123": {
+        "id": 124,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 99419,
+        "outoctects": 77101,
+        "timestamp": "2019-12-04 00:44"
+    },
+    "124": {
+        "id": 125,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:44"
+    },
+    "125": {
+        "id": 126,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:44"
+    },
+    "126": {
+        "id": 127,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:45"
+    },
+    "127": {
+        "id": 128,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 50114,
+        "outoctects": 23067,
+        "timestamp": "2019-12-04 00:45"
+    },
+    "128": {
+        "id": 129,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 133663,
+        "outoctects": 86469,
+        "timestamp": "2019-12-04 00:45"
+    },
+    "129": {
+        "id": 130,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:45"
+    },
+    "130": {
+        "id": 131,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:45"
+    },
+    "131": {
+        "id": 132,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:45"
+    },
+    "132": {
+        "id": 133,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 101649,
+        "outoctects": 79323,
+        "timestamp": "2019-12-04 00:45"
+    },
+    "133": {
+        "id": 134,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:45"
+    },
+    "134": {
+        "id": 135,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:45"
+    },
+    "135": {
+        "id": 136,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:46"
+    },
+    "136": {
+        "id": 137,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 50518,
+        "outoctects": 23469,
+        "timestamp": "2019-12-04 00:46"
+    },
+    "137": {
+        "id": 138,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 136657,
+        "outoctects": 88957,
+        "timestamp": "2019-12-04 00:46"
+    },
+    "138": {
+        "id": 139,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:46"
+    },
+    "139": {
+        "id": 140,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:46"
+    },
+    "140": {
+        "id": 141,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:46"
+    },
+    "141": {
+        "id": 142,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 104385,
+        "outoctects": 81545,
+        "timestamp": "2019-12-04 00:46"
+    },
+    "142": {
+        "id": 143,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:46"
+    },
+    "143": {
+        "id": 144,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:46"
+    },
+    "144": {
+        "id": 145,
+        "materialname": "switch A",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:47"
+    },
+    "145": {
+        "id": 146,
+        "materialname": "switch A",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 50518,
+        "outoctects": 23469,
+        "timestamp": "2019-12-04 00:47"
+    },
+    "146": {
+        "id": 147,
+        "materialname": "switch A",
+        "ifname": "enp0s8",
+        "status": "UP",
+        "inoctects": 138935,
+        "outoctects": 91235,
+        "timestamp": "2019-12-04 00:47"
+    },
+    "147": {
+        "id": 148,
+        "materialname": "switch A",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:47"
+    },
+    "148": {
+        "id": 149,
+        "materialname": "switch A",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:47"
+    },
+    "149": {
+        "id": 150,
+        "materialname": "switch B",
+        "ifname": "lo",
+        "status": "UP",
+        "inoctects": 16704,
+        "outoctects": 16704,
+        "timestamp": "2019-12-04 00:47"
+    },
+    "150": {
+        "id": 151,
+        "materialname": "switch B",
+        "ifname": "enp0s3",
+        "status": "UP",
+        "inoctects": 106555,
+        "outoctects": 83767,
+        "timestamp": "2019-12-04 00:47"
+    },
+    "151": {
+        "id": 152,
+        "materialname": "switch B",
+        "ifname": "virbr0",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:47"
+    },
+    "152": {
+        "id": 153,
+        "materialname": "switch B",
+        "ifname": "virbr0-nic",
+        "status": "DOWN",
+        "inoctects": 0,
+        "outoctects": 0,
+        "timestamp": "2019-12-04 00:47"
+    }
+}

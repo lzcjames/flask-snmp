@@ -1,5 +1,9 @@
 <div class="form-style-2"></div>
   <div class="form-style-2-heading">Liste des matériels</div>
+  <div>
+      <a href="{{ url_for('export_conf') }}" onclick="return alert('Data has been exported')"><input class="btn" type="submit" value="Export" /></input></a>
+      <br>
+  </div> 
   <table class="tabMaterial">
       <tr>
         <th></th>
@@ -8,20 +12,18 @@
         <th>MAC</th>
         <th>Interface</th>
         <th>Date</th>
-        <th>Status</th>
         <th>Community</th>
       </tr>
     {%for m in materials%} 
       <tr>
-        <td><a href="/to_form/{{m.name}}">Modifier</a> <a href="/delete_data/{{m.id}}">Supprimer</a></td>
+        <td><a href="/to_form/{{m.name}}">Modifier</a> <a href="/delete_data/{{m.id}}" onclick="return confirm('Are you sure?')">Supprimer</a></td>
         <td><a href="{{ url_for('get_SnmpText', name=m.name, ip=m.ip) }}">{{m.name}}</a></td>
         <td>{{m.ip}}</td>
         <td>{{m.mac}}</td>
         <td>{{m.interface}}</td>
         <td>{{m.date}}</td>
-        <td>{{m.status}}</td>
         <td>{{m.community}}</td>
       </tr>
     {%endfor%} 
   </table>
-  </div>
+</div>

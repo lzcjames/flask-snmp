@@ -11,16 +11,17 @@
 
 <div class="sidenav">
   <a href="{{ url_for('get_data') }}">Lister les matériels</a>
-  <a href="{{ url_for('get_log_event') }}">Consulter logs Event</a>
-  <a href="{{ url_for('get_log_record') }}">Consulter logs Record</a>
+  <a href="{{ url_for('get_log_event') }}">Consulter log Event</a>
+  <a href="{{ url_for('get_log_record') }}">Consulter log Record</a>
   <a class="highlight" href="#1">Chercher une conf </a>
   {% if admin %}
-  <a href="{{ url_for('get_form') }}">Manipuler une conf  </a>
+  <a href="{{ url_for('get_form') }}">Manipuler un matériel  </a>
   <a href="{{ url_for('get_form') }}">Importer les matériels  </a>
   {% endif %}
 </div>
 
 <div class="content">
+  <br>
   <a href="{{ url_for('logout') }}"><input class="btnLogout" type="submit" value="logout" /></input></a>
   {% if get_form %}
   <div class="form-style-2">
@@ -31,7 +32,6 @@
     <label for="field2"><span>adresse mac <span class="required">*</span></span><input type="text" class="input-field" name="mac"  {% if materialToModify %} value="{{ materialToModify.mac }}"{% endif %}/></label>
     <label for="field2"><span>interface <span class="required">*</span></span><input type="text" class="input-field" name="interface"  {% if materialToModify %} value="{{ materialToModify.interface }}"{% endif %}/></label>
     <label for="field2"><span>date ajoute <span class="required">*</span></span><input type="text" class="input-field" name="date"  {% if materialToModify %} value="{{ materialToModify.date }}"{% endif %}/></label>
-    <label for="field2"><span>status <span class="required">*</span></span><input type="text" class="input-field" name="status"  {% if materialToModify %} value="{{ materialToModify.status }}"{% endif %}/></label>
     <label for="field2"><span>community <span class="required">*</span></span><input type="text" class="input-field" name="community"  {% if materialToModify %} value="{{ materialToModify.community }}"{% endif %}/></label>
     <label><span></span><input type="submit" value="Valider" /></label>
     </form>
@@ -40,9 +40,11 @@
 
   {% if get_data and admin %}
   {% include 'tabConfAdmin.html'%}
+  
   {% elif get_data %}
   {% include 'tabConf.html'%}
   {% endif %}
+
 
   {% if get_log_event %}
   {% include 'tabLogEvent.html'%}
