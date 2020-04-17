@@ -20,7 +20,7 @@ Open CLI, on the path of project root folder:
 flask run
 ```
 
-## Init a databse
+## Init a database
 Open CLI, on the path of project root folder:
 ```bash
 flask create-db
